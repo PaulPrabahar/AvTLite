@@ -1,0 +1,10 @@
+services:
+  logindb:
+    image: postgres
+    networks: [login]
+
+networks:
+  login:
+
+volumes:
+  postgres_login:

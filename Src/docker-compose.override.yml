@@ -1,0 +1,12 @@
+services:
+   logindb:
+     container_name: logindb
+     environment:
+       - POSTGRES_USER=postgres
+       - POSTGRES_PASSWORD=postgres
+       - POSTGRES_DB=LoginDb
+     restart: always
+     ports: 
+       - "5432:5432"
+     volumes:
+      - postgres_login:/var/lib/postgresql/data
