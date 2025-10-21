@@ -1,4 +1,5 @@
 using BuildingBlocks.Behaviours;
+using FluentValidation;
 
 var builder = WebApplication.CreateBuilder(args);
 var assembly = typeof(Program).Assembly;
@@ -8,6 +9,7 @@ builder.Services.AddMediatR(config =>
 {
     config.RegisterServicesFromAssemblies(assembly);
     config.AddOpenBehavior(typeof(LogginBehaviour<,>));
+    config.AddOpenBehavior(typeof(ValidationBehaviour<,>));
 });
 
 builder.Services.AddDbContext<LoginDbContext>(opt =>
@@ -17,6 +19,8 @@ builder.Services.AddDbContext<LoginDbContext>(opt =>
         npg.EnableRetryOnFailure();  // transient faults
     });
 });
+
+builder.Services.AddValidatorsFromAssembly(assembly);
 
 builder.Services.AddCarter();
 
