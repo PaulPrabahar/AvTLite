@@ -1,8 +1,4 @@
-﻿using BuildingBlocks.CQRS;
-using Login.Api.Data;
-using Login.Api.Models;
-using Mapster;
-
+﻿
 namespace Login.Api.Login.Register;
 
 public record RegisterUserCommand(string UserName, string Password, string Role, DateTimeOffset Created_At, DateTimeOffset Updated_At, bool IsActive) : ICommand<RegisterUserResult>;

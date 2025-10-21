@@ -1,0 +1,7 @@
+﻿global using BuildingBlocks.CQRS;
+global using Login.Api.Data;
+global using Login.Api.Models;
+global using Mapster;
+global using Carter;
+global using MediatR;
+global using Microsoft.EntityFrameworkCore;

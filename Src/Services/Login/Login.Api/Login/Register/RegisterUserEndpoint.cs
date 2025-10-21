@@ -1,8 +1,4 @@
-﻿using Carter;
-using Mapster;
-using MediatR;
-
-namespace Login.Api.Login.Register;
+﻿namespace Login.Api.Login.Register;
 
 public record RegisterUserRequest(string UserName, string Password, string Role, DateTimeOffset Created_At, DateTimeOffset Updated_At, bool IsActive);
 public record RegisterUserResponse(Guid Id);
