@@ -1,6 +1,4 @@
 ﻿
-using Login.Api.Login.Register;
-
 namespace Login.Api.Login.GetUser;
 
 //public record GetUserRequest();

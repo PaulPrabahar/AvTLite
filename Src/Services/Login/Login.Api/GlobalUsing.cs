@@ -5,3 +5,7 @@ global using Mapster;
 global using Carter;
 global using MediatR;
 global using Microsoft.EntityFrameworkCore;
+global using Login.Api.Login.Register;
+global using Login.Api.Login.GetUser;
+global using Login.Api.Exceptions;
+global using FluentValidation;

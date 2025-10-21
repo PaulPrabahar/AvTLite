@@ -1,6 +1,4 @@
 ﻿
-using Login.Api.Exceptions;
-
 namespace Login.Api.Login.GetUserById;
 
 

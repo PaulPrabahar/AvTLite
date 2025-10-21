@@ -1,7 +1,4 @@
-﻿using Login.Api.Login.GetUser;
-using Microsoft.AspNetCore.Mvc;
-
-namespace Login.Api.Login.GetUserById;
+﻿namespace Login.Api.Login.GetUserById;
 
 //public record GetUserByIdRequest();
 public record GetUserByIdResponse(UserDetail userDetail);
@@ -11,7 +8,7 @@ public class GetUserByIdHandler : ICarterModule
     {
         app.MapGet("/register/{id}", async (Guid id, ISender sender) =>
         {
-            var result = await sender.Send(new GetUserByIdQuery(id)); 
+            var result = await sender.Send(new GetUserByIdQuery(id));
             var response = result.Adapt<GetUserByIdResponse>();
             return Results.Ok(response);
         }).WithName("GetUserById")
